@@ -55,11 +55,6 @@
             transition: var(--transition);
         }
 
-        nav.scrolled {
-            padding: 0.5rem 5%;
-            background: rgba(255, 255, 255, 0.98);
-        }
-
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -75,11 +70,9 @@
             text-decoration: none;
         }
 
-        /* IMAGEM 1: Logo da navegação */
         .logo img {
             height: 50px;
             width: auto;
-            transition: var(--transition);
         }
 
         .logo-text {
@@ -159,23 +152,6 @@
             padding: 120px 5% 80px;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(90,122,106,0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: float 20s infinite ease-in-out;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(-30px, -30px) scale(1.1); }
-        }
-
         .hero-content {
             max-width: 1400px;
             width: 100%;
@@ -192,8 +168,6 @@
             line-height: 1.1;
             color: var(--dark-green);
             margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards;
         }
 
         .hero-text .subtitle {
@@ -201,8 +175,6 @@
             color: var(--primary-green);
             margin-bottom: 1rem;
             font-style: italic;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.2s forwards;
         }
 
         .hero-text p {
@@ -210,8 +182,6 @@
             color: var(--text-light);
             margin-bottom: 2rem;
             max-width: 500px;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.4s forwards;
         }
 
         .hero-verse {
@@ -221,8 +191,6 @@
             margin: 2rem 0;
             font-style: italic;
             color: var(--text-dark);
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.6s forwards;
         }
 
         .hero-verse cite {
@@ -237,8 +205,6 @@
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.8s forwards;
         }
 
         .btn {
@@ -264,7 +230,6 @@
         .btn-primary:hover {
             background: var(--dark-green);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(90, 122, 106, 0.4);
         }
 
         .btn-secondary {
@@ -294,16 +259,8 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            position: relative;
-            animation: pulse 4s infinite ease-in-out;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-        }
-
-        /* IMAGEM 2: Logo grande no hero */
         .hero-logo-large img {
             width: 70%;
             height: auto;
@@ -320,35 +277,16 @@
             gap: 0.5rem;
             font-weight: 600;
             color: var(--primary-green);
-            animation: floatBadge 3s infinite ease-in-out;
         }
 
         .badge-1 {
             top: 10%;
             right: 0;
-            animation-delay: 0s;
         }
 
         .badge-2 {
             bottom: 20%;
             left: -20px;
-            animation-delay: 1s;
-        }
-
-        @keyframes floatBadge {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
         }
 
         /* Info Bar */
@@ -465,7 +403,6 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
-        /* IMAGEM 3: Foto da igreja */
         .about-image img {
             width: 100%;
             height: 500px;
@@ -533,23 +470,6 @@
             transition: var(--transition);
             position: relative;
             overflow: hidden;
-        }
-
-        .schedule-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: var(--primary-green);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: var(--transition);
-        }
-
-        .schedule-card:hover::before {
-            transform: scaleX(1);
         }
 
         .schedule-card:hover {
@@ -661,7 +581,6 @@
             font-size: 1.5rem;
             color: var(--primary-green);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: var(--transition);
             position: relative;
             z-index: 2;
         }
@@ -669,7 +588,6 @@
         .ministry-card:hover .ministry-icon {
             background: var(--primary-green);
             color: white;
-            transform: rotateY(360deg);
         }
 
         .ministry-card h3 {
@@ -683,24 +601,10 @@
             font-size: 0.95rem;
         }
 
-        /* Connection Section (Forms) */
+        /* Connection Section */
         .connection {
             background: linear-gradient(135deg, var(--dark-green) 0%, var(--primary-green) 100%);
             color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .connection::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            opacity: 0.3;
         }
 
         .connection .section-header h2,
@@ -716,8 +620,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            position: relative;
-            z-index: 1;
         }
 
         .form-card {
@@ -745,7 +647,6 @@
         .form-card p {
             margin-bottom: 1.5rem;
             opacity: 0.9;
-            line-height: 1.6;
         }
 
         .form-features {
@@ -775,7 +676,6 @@
         .btn-white:hover {
             background: var(--accent-gold);
             color: white;
-            transform: translateY(-2px);
         }
 
         /* Giving Section */
@@ -856,7 +756,6 @@
             border-radius: 20px;
             text-align: center;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            position: relative;
         }
 
         .qr-placeholder {
@@ -865,11 +764,8 @@
             border-radius: 15px;
             padding: 3rem;
             margin-bottom: 1.5rem;
-            position: relative;
-            overflow: hidden;
         }
 
-        /* IMAGEM 4: QR Code PIX */
         .qr-placeholder img {
             width: 100%;
             max-width: 250px;
@@ -893,7 +789,6 @@
         /* History Section */
         .history {
             background: white;
-            position: relative;
         }
 
         .timeline {
@@ -982,4 +877,1307 @@
         .timeline-content p {
             color: var(--text-light);
             font-size: 0.95rem;
-           
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--dark-green);
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--accent-gold);
+            margin-top: 0.3rem;
+        }
+
+        .contact-item div strong {
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-item div p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .map-container {
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.05);
+            border: 2px dashed rgba(255,255,255,0.3);
+            border-radius: 20px;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .map-placeholder i {
+            font-size: 4rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .map-btn {
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent-gold);
+            color: var(--dark-green);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .map-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-header {
+            background: var(--primary-green);
+            color: white;
+            padding: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .modal-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            background: rgba(255,255,255,0.3);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-green);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background: var(--dark-green);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a2f22;
+            color: white;
+            padding: 3rem 5% 1rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo img {
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-verse {
+                margin: 2rem auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .hero-logo-large {
+                width: 250px;
+                height: 250px;
+            }
+
+            .about-grid,
+            .giving-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 80px;
+                text-align: left !important;
+            }
+
+            .timeline-content::before {
+                left: -52px !important;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .vision-mission {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile Menu Panel */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background: white;
+            z-index: 999;
+            padding: 6rem 2rem 2rem;
+            transition: var(--transition);
+            box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--dark-green);
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <!-- IMAGEM 1: Logo principal da navegação -->
+                <img src="./image.png" alt="Logo IBES">
+                <div class="logo-text">
+                    <span>Igreja Batista</span>
+                    <span>El Shadai</span>
+                </div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">A Igreja</a></li>
+                <li><a href="#programacoes">Programações</a></li>
+                <li><a href="#ministerios">Ministérios</a></li>
+                <li><a href="#conectar">Conectar</a></li>
+                <li><a href="#contribuicoes">Contribuições</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="overlay" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-links">
+            <li><a href="#inicio" onclick="toggleMobileMenu()"><i class="fas fa-home"></i> Início</a></li>
+            <li><a href="#sobre" onclick="toggleMobileMenu()"><i class="fas fa-church"></i> A Igreja</a></li>
+            <li><a href="#programacoes" onclick="toggleMobileMenu()"><i class="fas fa-calendar-alt"></i> Programações</a></li>
+            <li><a href="#ministerios" onclick="toggleMobileMenu()"><i class="fas fa-users"></i> Ministérios</a></li>
+            <li><a href="#conectar" onclick="toggleMobileMenu()"><i class="fas fa-handshake"></i> Conectar</a></li>
+            <li><a href="#contribuicoes" onclick="toggleMobileMenu()"><i class="fas fa-heart"></i> Contribuições</a></li>
+            <li><a href="#historia" onclick="toggleMobileMenu()"><i class="fas fa-book-open"></i> História</a></li>
+            <li><a href="#contato" onclick="toggleMobileMenu()"><i class="fas fa-envelope"></i> Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Info Bar -->
+    <div class="info-bar">
+        <div class="info-bar-content">
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Rua 327, 115 - Conj. Ceará, Fortaleza - CE</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(85) 3489-2138</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>ibesigreja@gmail.com</span>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/igrejabelshadai/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@Igrejabelshadai" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com/Igrejabelshadai" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/558534892138" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="subtitle">Bem-vindo à IBES</div>
+                <h1>Anunciemos o Amor Gracioso</h1>
+                <p>Uma igreja comprometida com a formação de discípulos, acolhendo, auxiliando e transformando vidas para a glória do Senhor.</p>
+                
+                <div class="hero-verse">
+                    "Nisto conheceremos o amor: que Cristo deu a sua vida por nós"
+                    <cite>1ª João 3.16</cite>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#conectar" class="btn btn-primary">
+                        <i class="fas fa-handshake"></i>
+                        Quero me Conectar
+                    </a>
+                    <a href="#programacoes" class="btn btn-secondary">
+                        <i class="fas fa-clock"></i>
+                        Horários de Culto
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-logo-large">
+                    <!-- IMAGEM 2: Logo grande no hero -->
+                    <img src="./image.png" alt="Logo IBES">
+                </div>
+                <div class="floating-badge badge-1">
+                    <i class="fas fa-users"></i>
+                    <span>Comunidade Viva</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <i class="fas fa-cross"></i>
+                    <span>Desde 2005</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <!-- IMAGEM 3: Foto da fachada ou interior da igreja -->
+                    <img src="./foto-igreja.jpg" alt="Igreja Batista El Shadai">
+                </div>
+                
+                <div class="about-content">
+                    <h3>Nossa Identidade</h3>
+                    <p>Localizada no bairro Conjunto Ceará em Fortaleza, Ceará, somos uma comunidade de fé comprometida em viver e proclamar o evangelho de Cristo. Nossa igreja é um lugar de acolhimento, onde cada pessoa é valorizada e encorajada a crescer espiritualmente.</p>
+                    
+                    <p>Como igreja batista, cremos na autoridade das Escrituras, no batismo por imersão e no sacerdócio de todos os crentes. Buscamos ser uma família de fé que ama a Deus, ama uns aos outros e serve à comunidade.</p>
+
+                    <div class="vision-mission">
+                        <div class="vm-card">
+                            <h4><i class="fas fa-eye"></i> Visão</h4>
+                            <p>Ser uma igreja de referência pela unidade de seus membros e o compromisso com o IDE de Jesus.</p>
+                        </div>
+                        <div class="vm-card">
+                            <h4><i class="fas fa-bullseye"></i> Missão</h4>
+                            <p>Proclamar Jesus ao mundo, mediante a pregação integral do evangelho e o estilo de vida cristã.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="programacoes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Programações</h2>
+                <p>Participe de nossos cultos e encontros semanais. Há um lugar reservado para você e sua família.</p>
+            </div>
+
+            <div class="schedule-grid">
+                <div class="schedule-card">
+                    <div class="schedule-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Escola Bíblica Dominical</h3>
+                    <div class="schedule-time">
+                        <i class="fas fa-clock"></i>
+                        Domingos às 9h
+                    </div>
+                    <p>Estudo sistemático da Bíblia em classes segmentadas por faixa etária. Aprofunde seu conhecimento das Escrituras Sagradas.</p>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Culto de Louvor e Adoração</h3>
+                    <div class="schedule-time">
+                        <i class="fas fa-clock"></i>
+                        Domingos às 18h30
+                    </div>
+                    <p>Celebração dominical com louvor, adoração e pregação da Palavra. Momento de comunhão e renovação espiritual para toda a família.</p>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>Culto de Oração</h3>
+                    <div class="schedule-time">
+                        <i class="fas fa-clock"></i>
+                        Quartas-feiras às 19h
+                    </div>
+                    <p>Momento de intercessão, estudo bíblico e comunhão. Um culto íntimo onde buscamos a presença de Deus através da oração.</p>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Pequenos Grupos</h3>
+                    <div class="schedule-time">
+                        <i class="fas fa-clock"></i>
+                        Dias variados
+                    </div>
+                    <p>Encontros semanais nos lares para estudo bíblico, oração e comunhão. Consulte as lideranças ou nosso WhatsApp para saber os horários.</p>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Ensaios do Coral</h3>
+                    <div class="schedule-time">
+                        <i class="fas fa-clock"></i>
+                        Segundas e Sextas às 19h30
+                    </div>
+                    <p>Preparação musical para louvor aos domingos. Se você tem o dom da música, junte-se a nós na adoração através do canto.</p>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Culto Infantil</h3>
+                    <div class="schedule-time">
+                        <i class="fas fa-clock"></i>
+                        Domingos durante o culto
+                    </div>
+                    <p>Atividades especiais para crianças com lições bíblicas, músicas e brincadeiras. Formando pequenos discípulos de Cristo.</p>
+                </div>
+            </div>
+
+            <div class="special-notice">
+                <i class="fas fa-heart"></i>
+                <div>
+                    <strong>Segundo domingo de cada mês:</strong> Cesta do Amor - Traga 1kg de alimento não perecível para ser doado à comunidade
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ministries Section -->
+    <section class="ministries" id="ministerios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ministérios</h2>
+                <p>Descubra onde você pode servir e crescer em comunidade</p>
+            </div>
+
+            <div class="ministries-grid">
+                <div class="ministry-card">
+                    <!-- IMAGEM 4: Ministério de Mídia -->
+                    <img src="./ibes_midia.jpg" alt="Ministério de Mídia" class="ministry-image">
+                    <div class="ministry-content">
+                        <div class="ministry-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Ministério de Mídia</h3>
+                        <p>Transmissões ao vivo, fotografia, edição de vídeos e gestão das redes sociais da igreja.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <!-- IMAGEM 5: Ministério de Louvor -->
+                    <img src="./ibes_min_Musica.jpg" alt="Ministério de Louvor" class="ministry-image">
+                    <div class="ministry-content">
+                        <div class="ministry-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Ministério de Louvor</h3>
+                        <p>Coral, banda e equipe de adoração que conduzem a congregação na presença de Deus.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <div class="ministry-icon" style="margin: 1.5rem auto;">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="ministry-content" style="padding-top: 0;">
+                        <h3>Jovens e Adolescentes</h3>
+                        <p>União de Mocidade e grupos de jovens adultos. Encontros semanais, estudos e atividades de integração.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <!-- IMAGEM 6: Ministério de Casais -->
+                    <img src="./ibes_casais.jpg" alt="Ministério de Casais" class="ministry-image">
+                    <div class="ministry-content">
+                        <div class="ministry-icon">
+                            <i class="fas fa-ring"></i>
+                        </div>
+                        <h3>Ministério de Casais</h3>
+                        <p>Encontros de casais, estudos sobre família cristã e momentos de comunhão.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <div class="ministry-icon" style="margin: 1.5rem auto;">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="ministry-content" style="padding-top: 0;">
+                        <h3>Ministério de Missões</h3>
+                        <p>Apoio a missionários, campanhas missionárias e projetos de evangelismo local e global.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <div class="ministry-icon" style="margin: 1.5rem auto;">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="ministry-content" style="padding-top: 0;">
+                        <h3>Ação Social</h3>
+                        <p>Projetos de assistência à comunidade, cesta básica, visitas e apoio a famílias carentes.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <!-- IMAGEM 7: SMHB -->
+                    <img src="./ibes_logo_smhb.jpg" alt="SMHB" class="ministry-image">
+                    <div class="ministry-content">
+                        <div class="ministry-icon">
+                            <i class="fas fa-male"></i>
+                        </div>
+                        <h3>SMHB</h3>
+                        <p>Sociedade Missionária dos Homens Batistas. Reuniões de oração, estudos e projetos de serviço.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <!-- IMAGEM 8: Embaixadores do Rei -->
+                    <img src="./ibes_embaixada.jpg" alt="Embaixadores do Rei" class="ministry-image">
+                    <div class="ministry-content">
+                        <div class="ministry-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Embaixadores do Rei</h3>
+                        <p>Ministério infantil e juvenil masculino. Discipulado, estudos bíblicos e atividades especiais.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <div class="ministry-icon" style="margin: 1.5rem auto;">
+                        <i class="fas fa-praying-hands"></i>
+                    </div>
+                    <div class="ministry-content" style="padding-top: 0;">
+                        <h3>Mensageiras do Rei</h3>
+                        <p>Ministério infantil e juvenil feminino. Formação espiritual e desenvolvimento de dons.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <div class="ministry-icon" style="margin: 1.5rem auto;">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <div class="ministry-content" style="padding-top: 0;">
+                        <h3>Ministério Infantil</h3>
+                        <p>Cultos especiais, escola dominical e atividades lúdicas para crianças até 11 anos.</p>
+                    </div>
+                </div>
+
+                <div class="ministry-card">
+                    <div class="ministry-icon" style="margin: 1.5rem auto;">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <div class="ministry-content" style="padding-top: 0;">
+                        <h3>MCM</h3>
+                        <p>Mulheres Cristãs Missionárias. Círculo de oração, estudos bíblicos femininos e ações sociais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connection Section -->
+    <section class="connection" id="conectar">
+        <div class="container">
+            <div class="section-header">
+                <h2>Conecte-se Conosco</h2>
+                <p>Dê o próximo passo na sua jornada de fé. Estamos aqui para caminhar com você.</p>
+            </div>
+
+            <div class="forms-grid">
+                <div class="form-card">
+                    <h3><i class="fas fa-user-plus"></i> Primeira Visita</h3>
+                    <p>Seja bem-vindo! Queremos conhecer você e ajudar na sua caminhada.</p>
+                    <ul class="form-features">
+                        <li><i class="fas fa-check"></i> Receba informações sobre a igreja</li>
+                        <li><i class="fas fa-check"></i> Conheça nossos ministérios</li>
+                        <li><i class="fas fa-check"></i> Seja acompanhado pastoralmente</li>
+                    </ul>
+                    <button class="btn btn-white" onclick="openModal('visitante')">
+                        <i class="fas fa-paper-plane"></i>
+                        Preencher Formulário
+                    </button>
+                </div>
+
+                <div class="form-card">
+                    <h3><i class="fas fa-book-open"></i> Estudo Bíblico</h3>
+                    <p>Quer conhecer mais sobre a Bíblia? Solicite um estudo bíblico personalizado.</p>
+                    <ul class="form-features">
+                        <li><i class="fas fa-check"></i> Estudo individual ou em grupo</li>
+                        <li><i class="fas fa-check"></i> Material didático gratuito</li>
+                        <li><i class="fas fa-check"></i> Envio direto para o WhatsApp</li>
+                    </ul>
+                    <button class="btn btn-white" onclick="openModal('estudo')">
+                        <i class="fas fa-graduation-cap"></i>
+                        Solicitar Estudo
+                    </button>
+                </div>
+
+                <div class="form-card">
+                    <h3><i class="fas fa-praying-hands"></i> Aceitei Jesus</h3>
+                    <p>Você tomou uma decisão por Cristo? Registre seu compromisso de fé.</p>
+                    <ul class="form-features">
+                        <li><i class="fas fa-check"></i> Confissão de fé registrada</li>
+                        <li><i class="fas fa-check"></i> Acompanhamento discipulado</li>
+                        <li><i class="fas fa-check"></i> Material para novos convertidos</li>
+                    </ul>
+                    <button class="btn btn-white" onclick="openModal('conversao')">
+                        <i class="fas fa-heart"></i>
+                        Registrar Decisão
+                    </button>
+                </div>
+
+                <div class="form-card">
+                    <h3><i class="fas fa-hands-helping"></i> Pedido de Oração</h3>
+                    <p>Como podemos orar por você? Envie seu pedido de forma anônima ou identificada.</p>
+                    <ul class="form-features">
+                        <li><i class="fas fa-check"></i> Intercessão da igreja</li>
+                        <li><i class="fas fa-check"></i> Acompanhamento pastoral</li>
+                        <li><i class="fas fa-check"></i> Confidencialidade garantida</li>
+                    </ul>
+                    <button class="btn btn-white" onclick="openModal('oracao')">
+                        <i class="fas fa-pray"></i>
+                        Pedir Oração
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giving Section -->
+    <section class="giving" id="contribuicoes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contribuições</h2>
+                <p>Seu dízimo e oferta sustentam a obra de Deus. Contribua de forma segura e prática.</p>
+            </div>
+
+            <div class="giving-content">
+                <div class="giving-info">
+                    <h3>Formas de Contribuir</h3>
+                    <p>A fidelidade no dízimo e a generosidade nas ofertas são atos de adoração que mantêm nossa igreja ativa em sua missão de proclamar Jesus ao mundo.</p>
+                    
+                    <div class="giving-methods">
+                        <div class="giving-method">
+                            <div class="giving-icon">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                            <div class="giving-details">
+                                <h4>PIX (Banco do Brasil)</h4>
+                                <p>CNPJ: 02.316.681/0001-27</p>
+                                <p style="font-size: 0.8rem; margin-top: 0.3rem; color: var(--primary-green);">
+                                    <i class="fas fa-check-circle"></i> Envie comprovante para (85) 98154-5981
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="giving-method">
+                            <div class="giving-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="giving-details">
+                                <h4>Caixa Econômica Federal</h4>
+                                <p>Ag: 3281 | Op: 013 | Poupança: 20164-1</p>
+                                <p>CNPJ: 02.316.681/0001-27</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="giving-qr">
+                    <div class="qr-placeholder">
+                        <!-- IMAGEM 9: QR Code PIX -->
+                        <img src="./image(1).png" alt="QR Code PIX">
+                    </div>
+                    <div class="qr-instructions">
+                        <strong>Escaneie o QR Code</strong>
+                        <p>Aponte a câmera do seu celular para fazer a contribuição via PIX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history" id="historia">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa História</h2>
+                <p>Conheça a trajetória de fé da Igreja Batista El Shadai</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2005</div>
+                        <h3>Fundação</h3>
+                        <p>A igreja foi fundada no bairro Conjunto Ceará com o propósito de proclamar Jesus ao mundo.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2010</div>
+                        <h3>Crescimento</h3>
+                        <p>Expansão dos ministérios e consolidação da comunidade de fé no bairro.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2015</div>
+                        <h3>Nova Sede</h3>
+                        <p>Conquista do templo próprio na Rua 327, 115, estabelecendo nossa presença permanente na comunidade.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020</div>
+                        <h3>Expansão Digital</h3>
+                        <p>Início das transmissões online e ampliação do alcance do evangelho através da internet.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Hoje</div>
+                        <h3>Presente e Futuro</h3>
+                        <p>Continuamos firmes na missão de fazer discípulos e transformar vidas para a glória de Deus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Entre em Contato</h3>
+                    <p>Estamos aqui para ajudar. Entre em contato conosco pelos canais abaixo:</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Endereço</strong>
+                                <p>Rua 327, 115 - Conjunto Ceará<br>Fortaleza - CE, 60530-690</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Telefone</strong>
+                                <p>(85) 3489-2138</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>E-mail</strong>
+                                <p>ibesigreja@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <p>(85) 3489-2138</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/558534892138" class="btn btn-primary" style="margin-top: 1rem;">
+                        <i class="fab fa-whatsapp"></i>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Localização</h3>
+                        <p>Clique abaixo para ver no Google Maps</p>
+                        <a href="https://maps.google.com/?q=Rua+327+115+Conjunto+Ceara+Fortaleza+CE" target="_blank" class="map-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                            Abrir Mapa
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <!-- IMAGEM 10: Logo no footer -->
+                <img src="./image(2).png" alt="Logo IBES">
+                <h3>Igreja Batista El Shadai</h3>
+                <p>Proclamando Jesus ao mundo</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">A Igreja</a>
+                <a href="#programacoes">Programações</a>
+                <a href="#ministerios">Ministérios</a>
+                <a href="#conectar">Conectar</a>
+                <a href="#contribuicoes">Contribuições</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Igreja Batista El Shadai. Todos os direitos reservados.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.8rem;">"Ide por todo o mundo e pregai o evangelho a toda criatura" - Marcos 16:15</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Formulário</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Form content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+            document.querySelector('.overlay').classList.toggle('active');
+        }
+
+        // Modal Functions
+        function openModal(type) {
+            const modal = document.getElementById('modal');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+            
+            const forms = {
+                visitante: {
+                    title: 'Bem-vindo à IBES',
+                    content: `
+                        <form onsubmit="handleSubmit(event, 'visitante')">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Nome *</label>
+                                    <input type="text" name="nome" required placeholder="Seu nome completo">
+                                </div>
+                                <div class="form-group">
+                                    <label>Telefone *</label>
+                                    <input type="tel" name="telefone" required placeholder="(85) 99999-9999">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>E-mail</label>
+                                <input type="email" name="email" placeholder="seu@email.com">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Data de Nascimento</label>
+                                    <input type="date" name="nascimento">
+                                </div>
+                                <div class="form-group">
+                                    <label>Bairro</label>
+                                    <input type="text" name="bairro" placeholder="Seu bairro">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>É sua primeira vez? *</label>
+                                <select name="primeira_vez" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="sim">Sim, primeira vez</option>
+                                    <option value="nao">Já visitei antes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Como conheceu a igreja?</label>
+                                <input type="text" name="como_conheceu" placeholder="Indicação, redes sociais, etc.">
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i> Enviar para WhatsApp
+                            </button>
+                        </form>
+                    `
+                },
+                estudo: {
+                    title: 'Solicitar Estudo Bíblico',
+                    content: `
+                        <form onsubmit="handleSubmit(event, 'estudo')">
+                            <div class="form-group">
+                                <label>Nome *</label>
+                                <input type="text" name="nome" required placeholder="Seu nome completo">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Telefone *</label>
+                                    <input type="tel" name="telefone" required placeholder="(85) 99999-9999">
+                                </div>
+                                <div class="form-group">
+                                    <label>WhatsApp *</label>
+                                    <input type="tel" name="whatsapp" required placeholder="(85) 99999-9999">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Bairro onde reside *</label>
+                                <input type="text" name="bairro" required placeholder="Seu bairro">
+                            </div>
+                            <div class="form-group">
+                                <label>Melhor dia para o estudo *</label>
+                                <select name="dia" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="segunda">Segunda-feira</option>
+                                    <option value="terca">Terça-feira</option>
+                                    <option value="quarta">Quarta-feira</option>
+                                    <option value="quinta">Quinta-feira</option>
+                                    <option value="sexta">Sexta-feira</option>
+                                    <option value="sabado">Sábado</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Melhor período *</label>
+                                <select name="periodo" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="manha">Manhã</option>
+                                    <option value="tarde">Tarde</option>
+                                    <option value="noite">Noite</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fab fa-whatsapp"></i> Enviar para WhatsApp
+                            </button>
+                        </form>
+                    `
+                },
+                conversao: {
+                    title: 'Registro de Decisão por Cristo',
+                    content: `
+                        <form onsubmit="handleSubmit(event, 'conversao')">
+                            <div class="form-group">
+                                <label>Nome completo *</label>
+                                <input type="text" name="nome" required placeholder="Seu nome completo">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Telefone *</label>
+                                    <input type="tel" name="telefone" required placeholder="(85) 99999-9999">
+                                </div>
+                                <div class="form-group">
+                                    <label>Data da decisão *</label>
+                                    <input type="date" name="data" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Onde aceitou Jesus? *</label>
+                                <select name="local" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="culto_domingo">Culto de Domingo</option>
+                                    <option value="culto_quarta">Culto de Quarta</option>
+                                    <option value="ebd">Escola Bíblica Dominical</option>
+                                    <option value="pequeno_grupo">Pequeno Grupo</option>
+                                    <option value="online">Transmissão Online</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Gostaria de ser discipulado(a)? *</label>
+                                <select name="discipulado" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="sim">Sim, quero ser discipulado</option>
+                                    <option value="ja_sou">Já sou discipulado</option>
+                                    <option value="mais_tarde">Quero pensar melhor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Observações (opcional)</label>
+                                <textarea name="observacoes" rows="3" placeholder="Alguma informação adicional..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fab fa-whatsapp"></i> Enviar para WhatsApp
+                            </button>
+                        </form>
+                    `
+                },
+                oracao: {
+                    title: 'Pedido de Oração',
+                    content: `
+                        <form onsubmit="handleSubmit(event, 'oracao')">
+                            <div class="form-group">
+                                <label>Seu nome (opcional)</label>
+                                <input type="text" name="nome" placeholder="Anônimo">
+                            </div>
+                            <div class="form-group">
+                                <label>Telefone (opcional)</label>
+                                <input type="tel" name="telefone" placeholder="(85) 99999-9999">
+                            </div>
+                            <div class="form-group">
+                                <label>Tipo de pedido *</label>
+                                <select name="tipo" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="saude">Saúde</option>
+                                    <option value="familia">Família</option>
+                                    <option value="financeiro">Financeiro</option>
+                                    <option value="trabalho">Trabalho</option>
+                                    <option value="emocional">Emocional/Espiritual</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Seu pedido de oração *</label>
+                                <textarea name="pedido" rows="5" required placeholder="Descreva seu pedido de oração..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fab fa-whatsapp"></i> Enviar para WhatsApp
+                            </button>
+                        </form>
+                    `
+                }
+            };
+            
+            const form = forms[type];
+            title.textContent = form.title;
+            body.innerHTML = form.content;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+
+        function handleSubmit(e, type) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            let message = '';
+            const whatsappNumber = '558534892138';
+            
+            switch(type) {
+                case 'visitante':
+                    message = `*Nova Visita - IBES*%0A%0A` +
+                             `*Nome:* ${data.nome}%0A` +
+                             `*Telefone:* ${data.telefone}%0A` +
+                             `*E-mail:* ${data.email || 'Não informado'}%0A` +
+                             `*Nascimento:* ${data.nascimento || 'Não informado'}%0A` +
+                             `*Bairro:* ${data.bairro || 'Não informado'}%0A` +
+                             `*Primeira vez:* ${data.primeira_vez}%0A` +
+                             `*Como conheceu:* ${data.como_conheceu || 'Não informado'}`;
+                    break;
+                case 'estudo':
+                    message = `*Solicitação de Estudo Bíblico - IBES*%0A%0A` +
+                             `*Nome:* ${data.nome}%0A` +
+                             `*Telefone:* ${data.telefone}%0A` +
+                             `*WhatsApp:* ${data.whatsapp}%0A` +
+                             `*Bairro:* ${data.bairro}%0A` +
+                             `*Melhor dia:* ${data.dia}%0A` +
+                             `*Melhor período:* ${data.periodo}`;
+                    break;
+                case 'conversao':
+                    message = `*Decisão por Cristo - IBES*%0A%0A` +
+                             `*Nome:* ${data.nome}%0A` +
+                             `*Telefone:* ${data.telefone}%0A` +
+                             `*Data da decisão:* ${data.data}%0A` +
+                             `*Local:* ${data.local}%0A` +
+                             `*Quer discipulado:* ${data.discipulado}%0A` +
+                             `*Observações:* ${data.observacoes || 'Nenhuma'}`;
+                    break;
+                case 'oracao':
+                    message = `*Pedido de Oração - IBES*%0A%0A` +
+                             `*Nome:* ${data.nome || 'Anônimo'}%0A` +
+                             `*Telefone:* ${data.telefone || 'Não informado'}%0A` +
+                             `*Tipo:* ${data.tipo}%0A` +
+                             `*Pedido:* ${data.pedido}`;
+                    break;
+            }
+            
+            window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+            closeModal();
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
