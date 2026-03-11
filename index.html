@@ -55,6 +55,11 @@
             transition: var(--transition);
         }
 
+        nav.scrolled {
+            padding: 0.5rem 5%;
+            background: rgba(255, 255, 255, 0.98);
+        }
+
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -530,14 +535,14 @@
             color: var(--accent-gold);
         }
 
-        /* Ministries Section */
+        /* Ministries Section - CORRIGIDO */
         .ministries {
             background: white;
         }
 
         .ministries-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
@@ -548,7 +553,8 @@
             transition: var(--transition);
             cursor: pointer;
             border: 2px solid transparent;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
         }
 
         .ministry-card:hover {
@@ -558,47 +564,40 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
+        .ministry-image-container {
+            width: 100%;
+            position: relative;
+            background: var(--dark-green);
+        }
+
         .ministry-image {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: auto;
             display: block;
+            object-fit: contain;
         }
 
         .ministry-content {
             padding: 1.5rem;
-        }
-
-        .ministry-icon {
-            width: 60px;
-            height: 60px;
-            background: white;
-            border-radius: 50%;
+            text-align: center;
+            flex-grow: 1;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            margin: -30px auto 1rem;
-            font-size: 1.5rem;
-            color: var(--primary-green);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 2;
-        }
-
-        .ministry-card:hover .ministry-icon {
-            background: var(--primary-green);
-            color: white;
         }
 
         .ministry-card h3 {
             color: var(--dark-green);
             margin-bottom: 0.5rem;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
         }
 
         .ministry-card p {
             color: var(--text-light);
             font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         /* Connection Section */
@@ -678,7 +677,7 @@
             color: white;
         }
 
-        /* Giving Section */
+        /* Giving Section - QR CODE CORRIGIDO */
         .giving {
             background: var(--cream);
         }
@@ -752,26 +751,24 @@
 
         .giving-qr {
             background: white;
-            padding: 3rem;
+            padding: 2rem;
             border-radius: 20px;
             text-align: center;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
-        .qr-placeholder {
-            background: var(--cream);
-            border: 3px dashed var(--primary-green);
+        .qr-container {
+            width: 100%;
+            background: var(--dark-green);
             border-radius: 15px;
-            padding: 3rem;
+            overflow: hidden;
             margin-bottom: 1.5rem;
         }
 
-        .qr-placeholder img {
+        .qr-container img {
             width: 100%;
-            max-width: 250px;
             height: auto;
             display: block;
-            margin: 0 auto;
         }
 
         .qr-instructions {
@@ -1269,7 +1266,6 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <!-- IMAGEM 1: Logo principal da navegação -->
                 <img src="./ibes_logo.jpg" alt="Logo IBES">
                 <div class="logo-text">
                     <span>Igreja Batista</span>
@@ -1363,7 +1359,6 @@
             
             <div class="hero-visual">
                 <div class="hero-logo-large">
-                    <!-- IMAGEM 2: Logo grande no hero -->
                     <img src="./ibes_logo.jpg" alt="Logo IBES">
                 </div>
                 <div class="floating-badge badge-1">
@@ -1383,8 +1378,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <!-- IMAGEM 3: Foto da fachada ou interior da igreja -->
-                    <img src="./ibes_panoramica" alt="Igreja Batista El Shadai">
+                    <img src="./ibes_panoramica.jpg" alt="Igreja Batista El Shadai">
                 </div>
                 
                 <div class="about-content">
@@ -1499,7 +1493,7 @@
         </div>
     </section>
 
-    <!-- Ministries Section -->
+    <!-- Ministries Section - CORRIGIDO -->
     <section class="ministries" id="ministerios">
         <div class="container">
             <div class="section-header">
@@ -1509,120 +1503,110 @@
 
             <div class="ministries-grid">
                 <div class="ministry-card">
-                    <!-- IMAGEM 4: Ministério de Mídia -->
-                    <img src="./ibes_midia.jpg" alt="Ministério de Mídia" class="ministry-image">
+                    <div class="ministry-image-container">
+                        <img src="./ibes_midia.jpg" alt="Ministério de Mídia" class="ministry-image">
+                    </div>
                     <div class="ministry-content">
-                        <div class="ministry-icon">
-                            <i class="fas fa-video"></i>
-                        </div>
                         <h3>Ministério de Mídia</h3>
                         <p>Transmissões ao vivo, fotografia, edição de vídeos e gestão das redes sociais da igreja.</p>
                     </div>
                 </div>
 
                 <div class="ministry-card">
-                    <!-- IMAGEM 5: Ministério de Louvor -->
-                    <img src="./ibes_min_Musica.jpg" alt="Ministério de Louvor" class="ministry-image">
+                    <div class="ministry-image-container">
+                        <img src="./ibes_min_Musica.jpg" alt="Ministério de Louvor" class="ministry-image">
+                    </div>
                     <div class="ministry-content">
-                        <div class="ministry-icon">
-                            <i class="fas fa-music"></i>
-                        </div>
                         <h3>Ministério de Louvor</h3>
                         <p>Banda e equipe de adoração que conduzem a congregação na presença de Deus.</p>
                     </div>
                 </div>
 
                 <div class="ministry-card">
-                    <div class="ministry-icon" style="margin: 1.5rem auto;">
-                        <i class="fas fa-user-graduate"></i>
+                    <div class="ministry-image-container" style="background: var(--cream); display: flex; align-items: center; justify-content: center; min-height: 200px;">
+                        <i class="fas fa-user-graduate" style="font-size: 4rem; color: var(--primary-green);"></i>
                     </div>
-                    <div class="ministry-content" style="padding-top: 0;">
+                    <div class="ministry-content">
                         <h3>Jovens e Adolescentes</h3>
                         <p>União de Mocidade e grupos de jovens adultos. Encontros, estudos e atividades de integração.</p>
                     </div>
                 </div>
 
                 <div class="ministry-card">
-                    <!-- IMAGEM 6: Ministério de Casais -->
-                    <img src="./ibes_casais.jpg" alt="Ministério de Casais" class="ministry-image">
+                    <div class="ministry-image-container">
+                        <img src="./ibes_casais.jpg" alt="Ministério de Casais" class="ministry-image">
+                    </div>
                     <div class="ministry-content">
-                        <div class="ministry-icon">
-                            <i class="fas fa-ring"></i>
-                        </div>
                         <h3>Ministério de Casais</h3>
                         <p>Encontros de casais, estudos sobre família cristã e momentos de comunhão.</p>
                     </div>
                 </div>
 
                 <div class="ministry-card">
-                    <div class="ministry-icon" style="margin: 1.5rem auto;">
-                        <i class="fas fa-globe-americas"></i>
+                    <div class="ministry-image-container" style="background: var(--cream); display: flex; align-items: center; justify-content: center; min-height: 200px;">
+                        <i class="fas fa-globe-americas" style="font-size: 4rem; color: var(--primary-green);"></i>
                     </div>
-                    <div class="ministry-content" style="padding-top: 0;">
+                    <div class="ministry-content">
                         <h3>Ministério de Missões</h3>
                         <p>Apoio a missionários, campanhas missionárias e projetos de evangelismo local e global.</p>
                     </div>
                 </div>
 
                 <div class="ministry-card">
-                    <div class="ministry-icon" style="margin: 1.5rem auto;">
-                        <i class="fas fa-hands-helping"></i>
+                    <div class="ministry-image-container" style="background: var(--cream); display: flex; align-items: center; justify-content: center; min-height: 200px;">
+                        <i class="fas fa-hands-helping" style="font-size: 4rem; color: var(--primary-green);"></i>
                     </div>
-                    <div class="ministry-content" style="padding-top: 0;">
+                    <div class="ministry-content">
                         <h3>Ação Social</h3>
                         <p>Projetos de assistência à comunidade, cesta básica, visitas e apoio a famílias carentes.</p>
                     </div>
                 </div>
 
                 <div class="ministry-card">
-                    <!-- IMAGEM 7: SMHB -->
-                    <img src="./ibes_logo_smhb.jpg" alt="SMHB" class="ministry-image">
+                    <div class="ministry-image-container">
+                        <img src="./ibes_logo_smhb.jpg" alt="SMHB" class="ministry-image">
+                    </div>
                     <div class="ministry-content">
-                        <div class="ministry-icon">
-                            <i class="fas fa-male"></i>
-                        </div>
                         <h3>SMHB</h3>
                         <p>Sociedade Missionária dos Homens Batistas. Reuniões de oração, estudos e projetos de serviço.</p>
                     </div>
                 </div>
 
                 <div class="ministry-card">
-                    <!-- IMAGEM 8: Embaixadores do Rei -->
-                    <img src="./ibes_embaixada.jpg" alt="Embaixadores do Rei" class="ministry-image">
+                    <div class="ministry-image-container">
+                        <img src="./ibes_embaixada.jpg" alt="Embaixadores do Rei" class="ministry-image">
+                    </div>
                     <div class="ministry-content">
-                        <div class="ministry-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
                         <h3>Embaixadores do Rei</h3>
                         <p>Ministério infantil e juvenil masculino. Discipulado, estudos bíblicos e atividades especiais.</p>
                     </div>
                 </div>
 
                 <div class="ministry-card">
-                    <div class="ministry-icon" style="margin: 1.5rem auto;">
-                        <i class="fas fa-praying-hands"></i>
+                    <div class="ministry-image-container" style="background: var(--cream); display: flex; align-items: center; justify-content: center; min-height: 200px;">
+                        <i class="fas fa-praying-hands" style="font-size: 4rem; color: var(--primary-green);"></i>
                     </div>
-                    <div class="ministry-content" style="padding-top: 0;">
+                    <div class="ministry-content">
                         <h3>Mensageiras do Rei</h3>
                         <p>Ministério infantil e juvenil feminino. Formação espiritual e desenvolvimento de dons.</p>
                     </div>
                 </div>
 
                 <div class="ministry-card">
-                    <div class="ministry-icon" style="margin: 1.5rem auto;">
-                        <i class="fas fa-child"></i>
+                    <div class="ministry-image-container" style="background: var(--cream); display: flex; align-items: center; justify-content: center; min-height: 200px;">
+                        <i class="fas fa-child" style="font-size: 4rem; color: var(--primary-green);"></i>
                     </div>
-                    <div class="ministry-content" style="padding-top: 0;">
+                    <div class="ministry-content">
                         <h3>Ministério Infantil</h3>
                         <p>Cultos especiais, escola dominical e atividades lúdicas para crianças até 11 anos.</p>
                     </div>
                 </div>
 
                 <div class="ministry-card">
-                    <div class="ministry-icon" style="margin: 1.5rem auto;">
-                        <i class="fas fa-female"></i>
+                    <div class="ministry-image-container" style="background: var(--cream); display: flex; align-items: center; justify-content: center; min-height: 200px;">
+                        <i class="fas fa-female" style="font-size: 4rem; color: var(--primary-green);"></i>
                     </div>
-                    <div class="ministry-content" style="padding-top: 0;">
+                    <div class="ministry-content">
                         <h3>MCM</h3>
                         <p>Mulheres Cristãs Missionárias. Círculo de oração, estudos bíblicos femininos e ações sociais.</p>
                     </div>
@@ -1699,7 +1683,7 @@
         </div>
     </section>
 
-    <!-- Giving Section -->
+    <!-- Giving Section - QR CODE CORRIGIDO -->
     <section class="giving" id="contribuicoes">
         <div class="container">
             <div class="section-header">
@@ -1740,9 +1724,8 @@
                 </div>
 
                 <div class="giving-qr">
-                    <div class="qr-placeholder">
-                        <!-- IMAGEM 9: QR Code PIX -->
-                        <img src="./ibes_qr.jpg" alt="QR Code PIX">
+                    <div class="qr-container">
+                        <img src="./ibes_qr_code.jpg" alt="QR Code PIX">
                     </div>
                     <div class="qr-instructions">
                         <strong>Escaneie o QR Code</strong>
@@ -1856,8 +1839,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <!-- IMAGEM 10: Logo no footer -->
-                <img src="./image(2).png" alt="Logo IBES">
+                <img src="./ibes_logo_footer.png" alt="Logo IBES">
                 <h3>Igreja Batista El Shadai</h3>
                 <p>Proclamando Jesus ao mundo</p>
             </div>
